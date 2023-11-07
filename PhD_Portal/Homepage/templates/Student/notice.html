@@ -1,0 +1,27 @@
+{% extends "student_base.html" %}
+{% block content %}
+<div class="container">
+    <h1>Notices</h1>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="notice-list">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <h3>Notice 1</h3>
+<!--                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>-->
+                        <a href="https://drive.google.com/file/d/1G8Ac_5enSPCij9qlr34u5-B9oWi8mzPv/view?usp=drive_link" target="_blank" class="btn btn-primary">View Notice</a>
+                        <small class="text-muted">Posted on: 30-10-2023</small>
+                    </li>
+                    <li class="list-group-item">
+                        <h3>Notice 2</h3>
+<!--                        <p>Nulla quis lorem ut libero malesuada feugiat.</p>-->
+                        <a href="https://drive.google.com/file/d/1G8Ac_5enSPCij9qlr34u5-B9oWi8mzPv/view?usp=drive_link" target="_blank" class="btn btn-primary">View Notice</a>
+                        <small class="text-muted">Posted on: 01-11-2023/small>
+                    </li>
+                    <!-- Add more notices with Google Drive links as needed -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,21 @@
+/* print.css */
+/* Hide the navbar */
+.navbar {
+  display: none;
+}
+
+
+/* print.css */
+@page {
+  size: landscape;  /* Set the page size to A4 or any other paper size */
+  margin: 0; /* Set margins as needed */
+  padding: 0; /* Set padding to 0 */
+
+}
+
+
+
+.table {
+  width: 60%; /* Ensure the table fits within the page width */
+  page-break-inside: avoid;
+}

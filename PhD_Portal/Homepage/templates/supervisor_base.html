@@ -1,0 +1,108 @@
+{% load static%}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supervisor Dashboard</title>
+    <link rel="icon" href =
+"{% static 'images/icon.png' %}"  type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/0c2bfb0732.js" crossorigin="anonymous"></script>
+    <style>
+        .scrollable-navbar {
+            overflow-x: auto;
+        }
+
+        .dashboard {
+            margin-top: 30px;
+        }
+
+        .card {
+            margin: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-info navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="">Terna College</a>
+            <ul class="navbar-nav d-flex flex-row me-1">
+                <li class="nav-item me-3 me-lg-0">
+                    <a class="nav-link text-white" href="/edit_profile/"><i
+                            class="fa-solid fa-pen-to-square"></i> Edit Profile</a>
+                </li>
+                <li class="nav-item me-3 me-lg-0">
+                    <a class="nav-link text-white" href="/supervisor_student-details/"><i
+                            class="fa-solid fa-graduation-cap"></i> Student
+                        Details</a>
+                </li>
+                <li class="nav-item me-3 me-lg-0">
+                    <a class="nav-link text-white" href="/remuneration/"><i
+                            class="fa-solid fa-money-bill"></i> Remuneration Data</a>
+                </li>
+<!--                <li class="nav-item me-3 me-lg-0">-->
+<!--                    <a class="nav-link text-white" href="/Supervisior/IPR_Scholar.html"><i-->
+<!--                            class="fa-solid fa-copyright"></i> IPR Scholar</a>-->
+<!--                </li>-->
+                <li class="nav-item me-3 me-lg-0">
+                    <a class="nav-link text-white" href="/publication/"><i
+                            class="fa-solid fa-newspaper"></i> Publication
+                        Associate</a>
+                </li>
+                <li class="nav-item me-3 me-lg-0">
+                    <a class="nav-link text-white" href="/event-notifications/"><i
+                            class="fa-solid fa-bell"></i> Event Notification</a>
+                </li>
+                <li class="nav-item me-3 me-lg-0">
+                    <a class="nav-link text-white" href="/research_grant_details/"><i
+                            class="fa-solid fa-dollar-sign"></i> Research Grant</a>
+                </li>
+                <li class="nav-item me-3 me-lg-0">
+                    <a class="nav-link text-white" href="/supervisor_notice/"><i class="fa-solid fa-envelope"></i>
+                        Notice
+                    </a>
+                </li>
+                <li class="nav-item me-3 me-lg-0">
+                    <a class="nav-link text-white" href="/super_forum/"><i
+                            class="fa-solid fa-comment"></i></i>
+                        Discussion
+                        Forum</a>
+                </li>
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link text-white" href="/Supervisior/Auth_Events.html"><i-->
+<!--                            class="fa-solid fa-list-check"></i> Authorize Event</a>-->
+<!--                </li>-->
+<!--                <li class="nav-item me-3 me-lg-0">-->
+<!--                    <a class="nav-link text-white" href="/Supervisior/Reports.html"><i class="fa-solid fa-file"></i>-->
+<!--                        Reports</a>-->
+<!--                </li>-->
+
+                <div class="dropdown">
+                <button class="btn text-white dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <i class="fas fa-user mx-1"></i> Supervisior
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/logout/">Logout</a></li>
+                </ul>
+            </div>
+            </ul>
+        </div>
+    </nav>
+    <!-- Navbar -->
+
+{% block content %}
+
+        {% endblock %}
+</body>
+
+</html>

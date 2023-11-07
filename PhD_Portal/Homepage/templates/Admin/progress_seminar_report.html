@@ -1,0 +1,105 @@
+{% extends "admin_base.html" %}
+{% block content %}
+<!--{% load static %}-->
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/print.css' %}" media="print">
+<style>
+  .table-container {
+    overflow-x: auto;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .centered {
+    text-align: center;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  table th, table td {
+    text-align: center;
+  }
+</style>
+<div class="container full-height">
+  <div class="header">
+    <a href="{% url 'admin_home' %}" class="btn btn-secondary d-print-none">Back</a>
+  </div>
+
+  <h1 class="text-center">Terna Engineering College</h1>
+  <h2 class="text-center">Notice</h2>
+  <div id="current-date" class="text-right font-weight-bold"></div>
+  <p class="mt-4">
+    All the Ph.D. students who have enrolled during the A.Y. 2021-2022 and A.Y. 2022-2023 and completed Ph.D. coursework as on date are hereby informed to follow the progress seminar (Semester/Annual) schedule as shown below.
+  </p>
+  <br>
+  <div>
+    <table border="1">
+      <thead >
+        <tr>
+          <th scope="col">Sr. No.</th>
+          <th scope="col">Name of Student</th>
+          <th scope="col">Academic Year of Enrollment</th>
+          <th scope="col">Department</th>
+          <th scope="col">Supervisor Name</th>
+          <th scope="col">Topic Approval Seminar</th>
+          <th scope="col">SPS-01</th>
+          <th scope="col">APS-01</th>
+          <th scope="col">SPS-02</th>
+          <th scope="col">APS-02</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for record in records %}
+          <tr>
+            <th scope="row">{{ forloop.counter }}</th>
+            <td>{{ record.student.name }}</td>
+            <td>{{ record.academic_year }}</td>
+            <td>{{ record.department }}</td>
+            <td>{{ record.supervisor_name }}</td>
+            <td>{{ record.topic_approval_seminar }}</td>
+            <td>{{ record.sps_01 }}</td>
+            <td>{{ record.aps_01 }}</td>
+            <td>{{ record.sps_02 }}</td>
+            <td>{{ record.aps_02 }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="header">
+    <div><h4>Dean</h4></div>
+    <div><h4>Principal</h4></div>
+  </div>
+
+
+  <div class="centered">
+    <button id="print-button" class="btn btn-primary d-print-none">Print Report</button>
+  </div>
+</div>
+
+<script>
+  function updateCurrentDate() {
+    const currentDateElement = document.getElementById('current-date');
+    const currentDate = new Date();
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    currentDateElement.innerHTML = "Date: " + currentDate.toLocaleDateString('en-US', options);
+  }
+
+  updateCurrentDate(); // Initial call to set the current date
+  setInterval(updateCurrentDate, 1000); // Update the date every second
+
+  document.getElementById('print-button').addEventListener('click', function() {
+    window.print();
+  });
+</script>
+
+{% endblock %}

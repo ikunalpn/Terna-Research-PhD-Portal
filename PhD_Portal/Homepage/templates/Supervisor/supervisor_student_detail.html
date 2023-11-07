@@ -1,0 +1,30 @@
+{% extends "supervisor_base.html" %}
+{% block content %}
+    <div class="container">
+        <h2>Student Details</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Photo</th>
+                    <th>Status</th>
+                    <th>Scholar</th>
+                    <th>Title</th>
+                    <!-- Add more columns as needed -->
+                </tr>
+            </thead>
+            <tbody>
+                {% for student in students %}
+                    <tr>
+                        <td>{{ student.name }}</td>
+                        <td><img src="{{ student.photo.url }}" alt="Student Photo" height="100"></td>
+                        <td>{{ student.status }}</td>
+                        <td>{{ student.scholar }}</td>
+                        <td>{{ student.title }}</td>
+                        <!-- Add more columns as needed -->
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

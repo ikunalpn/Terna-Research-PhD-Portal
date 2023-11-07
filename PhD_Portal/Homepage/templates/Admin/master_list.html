@@ -1,0 +1,153 @@
+{% extends "admin_base.html" %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/print.css' %}" media="print">
+<style>
+  .table-container {
+    overflow-x: auto;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .centered {
+    text-align: center;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  table th, table td {
+    text-align: center;
+    padding: 3px;
+  }
+@media print {
+    @page {
+      size: landscape;
+      margin: 0;
+      padding: 0;
+    }
+  }
+.table {
+  width: 60%; /* Ensure the table fits within the page width */
+  page-break-inside: avoid;
+}
+
+</style>
+<div class="container full-height">
+  <div class="header">
+    <a href="{% url 'admin_home' %}" class="btn btn-secondary d-print-none">Back</a>
+  </div>
+<br>
+  <h1 class="text-center">Terna Engineering College</h1>
+  <h2 class="text-center">Notice</h2>
+    <br>
+  <h2 class="text-center">AY 2022-23</h2>
+  <div id="current-date" class="text-right font-weight-bold"></div>
+  <p class="mt-4">
+    Below List of Students for Academic Year 2023-24
+  </p>
+  <br>
+<table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Branch</th>
+                <th>Year</th>
+                <th>Research Title</th>
+                <th>Area of Research</th>
+                <th>Subject</th>
+                <th>Guide</th>
+<!--                <th>Co-guide</th>-->
+                <th>Register As</th>
+<!--                <th>Register On</th>-->
+                <th>Gender</th>
+                <th>Date of Birth</th>
+<!--                <th>Lives In</th>-->
+                <th>Address</th>
+                <th>Contact Number</th>
+                <th>Email</th>
+<!--                <th>Category</th>-->
+<!--                <th>Enrollment Number</th>-->
+<!--                <th>External Evaluator</th>-->
+<!--                <th>Internal Evaluator</th>-->
+<!--                <th>Chairman</th>-->
+<!--                <th>Pre-Synopsis Date</th>-->
+<!--                <th>Synopsis Date</th>-->
+<!--                <th>Thesis Date</th>-->
+<!--                <th>Defence Date</th>-->
+            </tr>
+        </thead>
+        <tbody>
+            {% for student_detail in student_details %}
+                <tr>
+                    <td>{{ student_detail.student.name }}</td>
+                    <td>{{ student_detail.branch }}</td>
+                    <td>{{ student_detail.year }}</td>
+                    <td>{{ student_detail.research_title }}</td>
+                    <td>{{ student_detail.area_of_research }}</td>
+                    <td>{{ student_detail.subject }}</td>
+                    <td>{{ student_detail.guide }}</td>
+<!--                    <td>{{ student_detail.co_guide }}</td>-->
+<!--                    <td>{{ student_detail.register_as }}</td>-->
+                    <td>{{ student_detail.register_on }}</td>
+                    <td>{{ student_detail.gender }}</td>
+                    <td>{{ student_detail.dob }}</td>
+<!--                    <td>{{ student_detail.lives_in }}</td>-->
+                    <td>{{ student_detail.address }}</td>
+                    <td>{{ student_detail.contact_no }}</td>
+                    <td>{{ student_detail.email }}</td>
+                    <!-- Add attributes from StudentMasterList -->
+                    {% for student_master in student_master_list %}
+                        {% if student_master.student_id == student_detail.student_id %}
+<!--                            <td>{{ student_master.category }}</td>-->
+<!--                            <td>{{ student_master.enrollment_number }}</td>-->
+<!--                            <td>{{ student_master.external_evaluator }}</td>-->
+<!--                            <td>{{ student_master.internal_evaluator }}</td>-->
+<!--                            <td>{{ student_master.chairman }}</td>-->
+<!--                            <td>{{ student_master.pre_synopsis_date }}</td>-->
+<!--                            <td>{{ student_master.synopsis_date }}</td>-->
+<!--                            <td>{{ student_master.thesis_date }}</td>-->
+<!--                            <td>{{ student_master.defence_date }}</td>-->
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+  <br>
+  <br>
+  <br>
+  <br>.
+
+  <div class="header">
+    <div><h4>Dean</h4></div>
+    <div><h4>Principal</h4></div>
+  </div>
+
+
+  <div class="centered">
+    <button id="print-button" class="btn btn-primary d-print-none">Print Report</button>
+  </div>
+</div>
+
+<script>
+  function updateCurrentDate() {
+    const currentDateElement = document.getElementById('current-date');
+    const currentDate = new Date();
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    currentDateElement.innerHTML = "Date: " + currentDate.toLocaleDateString('en-US', options);
+  }
+
+  updateCurrentDate(); // Initial call to set the current date
+  setInterval(updateCurrentDate, 1000); // Update the date every second
+
+  document.getElementById('print-button').addEventListener('click', function() {
+    window.print();
+  });
+</script>
+
+{% endblock %}

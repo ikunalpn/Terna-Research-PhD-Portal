@@ -1,0 +1,155 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard</title>
+  <link rel="icon" href =
+"{% static 'images/icon.png' %}"  type="image/x-icon">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/0c2bfb0732.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-info navbar-dark">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+      <!-- Navbar brand -->
+      <a class="navbar-brand" href="/index.html">Terna College</a>
+
+      <!-- Icons -->
+      <ul class="navbar-nav d-flex flex-row me-1">
+        <li class="nav-item me-3 me-lg-0">
+          <a class="nav-link text-white" data-bs-toggle="offcanvas" href="#offcanvasExample"
+            aria-controls="offcanvasExample"><i class="fa-solid fa-user lg-10"></i> Student Profile</a>
+        </li>
+        <li class="nav-item me-3 me-lg-0">
+          <a class="nav-link text-white" href="/reg_sym/"><i class=" fa-regular fa-file-powerpoint
+            lg-10"></i> Registration for
+            Symposium</a>
+        </li>
+        <li class="nav-item me-3 me-lg-0">
+          <a class="nav-link text-white" href="/student_notice/"><i class="fa-regular fa-bell"></i></i>
+            Notification</a>
+        </li>
+        <li class="nav-item me-3 me-lg-0">
+          <a class="nav-link text-white" href="/forum/"><i class="fa-solid fa-comment"></i></i> Discussion
+            Forum</a>
+        </li>
+        <li class="nav-item me-3 me-lg-0">
+          <a class="nav-link text-white" href="/reg_sym/"><i
+              class="fa-solid fa-calendar-days"></i></i> Progress Seminar Calender</a>
+        </li>
+<!--        <li class="nav-item me-3 me-lg-0">-->
+<!--          <a class="nav-link text-white" data-bs-toggle="offcanvas" href="#PSC_events"-->
+<!--            aria-controls="offcanvasExample"><i class="fa-solid fa-book"></i></i></i> Publication</a>-->
+<!--        </li>-->
+
+        <div class="dropdown">
+          <button class="btn text-white dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-user mx-1"></i> Profile
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/logout/">Logout</a></li>
+          </ul>
+        </div>
+    </div>
+
+    <!-- Container wrapper -->
+  </nav>
+  <!-- Navbar -->
+
+
+
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Edit Student Profile</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="dropdown mt-3">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+          Update Info
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="/regform/">Registration Form</a></li>
+          <li><a class="dropdown-item" href="/upload_docs/">Upload Documents</a></li>
+
+        </ul>
+      </div>
+
+
+    </div>
+  </div>
+
+
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="PSC_events" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Progress Seminar</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <a class="dropdown-item" href="/Student/Publication/View_event.html">View Events</a>
+      <a class="dropdown-item" href="/Student/Publication/Upload_PSR.html">Upload Progess Seminar Report</a>
+      <a class="dropdown-item" href="/Student/Publication/Upload_EvalReport.html">Upload Evalution Report</a>
+      <a class="dropdown-item" href="/Student/Publication/Upload_thesis.html">Thesis Upload</a>
+      <a class="dropdown-item" href="/Student/Publication/View_event.html">View Event Remark</a>
+    </div>
+  </div>
+  <!-- <div class="container">
+    <img src="Images/student_photo.jpg" alt="..." class="img-thumbnail mt-3 mx-3" height="200" width="200">
+    <div>
+      <h2 class="font-weight-bold ">John Doe</h2>
+      <h5 class="font-weight-bold ">PhD Scholar</h5>
+      <h5 class="font-weight-bold ">Sem 2 </h5>
+    </div>
+  </div> -->
+<!--  <div class="container">-->
+<!--    <div class="left-container" style="width: 300px;">-->
+<!--      &lt;!&ndash; Left content goes here &ndash;&gt;-->
+<!--      &lt;!&ndash; Student information &ndash;&gt;-->
+<!--      <img src="Images/student_photo.jpg" alt="..." class="img-thumbnail mt-3 mx-3" height="200" width="200">-->
+<!--      <h1> John Doe</h1>-->
+<!--      <h2 class="font-weight-bold ">Contact Details</h2>-->
+<!--      <hr>-->
+<!--      <p>Mobile No. &nbsp 1234567889</p>-->
+<!--      <hr>-->
+<!--      <p> Email ID &nbsp &nbsp &nbsp abcd@gmail.com</p>-->
+<!--      <hr>-->
+
+<!--      <h2>Basic Details</h2>-->
+<!--      <hr>-->
+<!--      <p>GR NO.&nbsp &nbsp &nbsp &nbsp TU4F2315778</p>-->
+<!--      <hr>-->
+<!--      <p>Father's Name&nbsp Micheal </p>-->
+<!--      <hr>-->
+<!--      <p>Mother's Name &nbsp Reema</p>-->
+<!--      <hr>-->
+<!--      <p>DOB &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 10/10/2000</p>-->
+<!--      <hr>-->
+<!--      <p>Caste Catogory &nbsp &nbsp &nbsp &nbsp AB</p>-->
+<!--      <hr>-->
+<!--    </div>-->
+
+
+<!--  </div>-->
+<!--  </div>-->
+
+{% block content %}
+        {% endblock %}
+  <script>
+    $(document).ready(function () {
+      $('.dropdown-toggle').dropdown();
+    });
+  </script>
+</body>
+
+</html>

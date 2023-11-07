@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block content %}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<div class="container">
+    <div class="container my-3">
+        <button id="all-button" class="btn btn-primary" data-status="all">All</button>
+        <button id="ongoing-button" class="btn btn-success" data-status="ongoing">Ongoing</button>
+        <button id="completed-button" class="btn btn-info" data-status="completed">Completed</button>
+    </div>
+
+    <div class="container">
+        <h1>Student List</h1>
+        <div class="row">
+            {% for student in students %}
+                <div class="col-md-4 student-card" data-status="{{ student.status }}">
+
+    <br>
+    <div class="card">
+        <div class="row no-gutters">
+            <div class="col-md-4">
+                <img src="{{ student.photo.url }}" alt="{{ student.name }}" class="card-img rounded-circle">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <a href="{% url 'student_detail' student.id %}" style="">
+                    <h5 class="card-title">{{ student.name }}</h5>
+                    </a>
+                    <p class="card-text">Status: {{ student.status }}</p>
+                    <p class="card-text">Scholar: {{ student.scholar }}</p>
+                    <p class="card-text">Title: {{ student.title }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        // Initially, show all students
+        $(".student-card").show();
+
+        // Handle button clicks
+        $("#all-button").click(function () {
+            $(".student-card").show();
+        });
+
+        $("#ongoing-button").click(function () {
+            $(".student-card").hide();
+            $(".student-card[data-status='Ongoing']").show();
+        });
+
+        $("#completed-button").click(function () {
+            $(".student-card").hide();
+            $(".student-card[data-status='Completed']").show();
+        });
+    });
+</script>
+
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "student_base.html" %}
+{% block content %}
+    <div class="container">
+        <form method="post" class="my-4">
+            {% csrf_token %}
+            <div class="mb-4">
+                <!-- Non-editable fields -->
+                <h2>{{ student.student.name }}</h2>
+                <p>Status: {{ student.student.status }}</p>
+                <p>Scholar: {{ student.student.scholar }}</p>
+                <p>Title: {{ student.student.title }}</p>
+            </div>
+            <hr>
+
+            <h2>Additional Details</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Branch: {{ student.branch }}</p>
+                    <p>Year: {{ student.year }}</p>
+                    <p>Research Title: {{ student.research_title }}</p>
+                    <p>Area of Research: {{ student.area_of_research }}</p>
+                    <p>Subject: {{ student.subject }}</p>
+                    <p>Guide: {{ student.guide }}</p>
+                    <p>Co-Guide: {{ student.co_guide }}</p>
+                    <p>Register as: {{ student.register_as }}</p>
+                    <p>Register on: {{ student.register_on }}</p>
+                </div>
+            </div>
+            <hr>
+
+            <!-- Editable fields using the form -->
+            <div class="mb-4">
+                <h2>Edit your Details</h2>
+                <br>
+                {{ form.as_p }}
+            </div>
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+        </form>
+    </div>
+{% endblock %}

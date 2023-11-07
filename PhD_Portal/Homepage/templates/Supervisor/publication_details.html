@@ -1,0 +1,26 @@
+{% extends "supervisor_base.html" %}
+{% block content %}
+    <div class="container">
+        <h2>Publication Details</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Publication Date</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for publication in publications %}
+                    <tr>
+                        <td>{{ publication.title }}</td>
+                        <td>{{ publication.author }}</td>
+                        <td>{{ publication.publication_date }}</td>
+                        <td>{{ publication.description }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

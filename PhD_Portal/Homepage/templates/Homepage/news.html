@@ -1,0 +1,271 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+     .main-container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .sub-container {
+      flex: 1;
+      height: 200px;
+    }
+
+.sub-container > div img {
+  margin: 0px; /* Remove margin from the images */
+}
+    .pink-container {
+      background-color: pink;
+    }
+
+    .yellow-container {
+      background-color: yellow;
+    }
+
+    .orange-container {
+      background-color: orange;
+    }
+   .sub-container {
+      height: 450px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sub-container > div {
+      flex: 1;
+      background-color: white;
+      margin: 0px;
+    }
+
+.imagea{
+    height:250px;
+    width:500px;
+    }
+  .c2{
+  height:250px;
+  width:100%;
+  }
+
+    .container {
+  position: relative;
+  width: 100%; /* Set the desired width for the container */
+}
+
+/* Image styling */
+.image {
+  height:610px;
+  width: 100%;
+<!--  height: auto;-->
+<!--  display: block;-->
+}
+
+.image1{
+  height:300px;
+  width: 100%;
+<!--  height: auto;-->
+<!--  display: block; -->
+
+}
+
+/* Light div styling */
+.light {
+  position: absolute;
+  top: 0; /* Adjust to position the light div vertically */
+  left: 16px; /* Adjust to position the light div horizontally */
+  width: 475px; /* Match the container's width */
+  height: 100%; /* Match the container's height */
+  background: rgba(255, 165, 0, 0.3); /* Light background color with opacity */
+  z-index: 1; /* Ensure the light div is on top of the image */
+}
+
+
+  .light1 {
+  position: absolute;
+  top: 0; /* Adjust to position the light div vertically */
+  left: 16px; /* Adjust to position the light div horizontally */
+  width: 475px; /* Match the container's width */
+  height: 100%; /* Match the container's height */
+  background: rgba(0,255,255, 0.3); /* Light background color with opacity */
+  z-index: 1; /* Ensure the light div is on top of the image */
+}
+
+
+  .light2 {
+  position: absolute;
+  top: 0; /* Adjust to position the light div vertically */
+  left: 16px; /* Adjust to position the light div horizontally */
+  width: 475px; /* Match the container's width */
+  height: 96%; /* Match the container's height */
+  background: rgba(128, 0, 128, 0.3); /* Light background color with opacity */
+  z-index: 1; /* Ensure the light div is on top of the image */
+  margin-top:10px;
+}
+
+  .light3 {
+  position: absolute;
+  top: 0; /* Adjust to position the light div vertically */
+ left: 16px; /* Adjust to position the light div horizontally */
+  width: 475px; /* Match the container's width */
+  height: 100%; /* Match the container's height */
+  background: rgba(165, 42, 42, 0.3); /* Light background color with opacity */
+  z-index: 1; /* Ensure the light div is on top of the image */
+}
+
+
+ .light4 {
+  position: absolute;
+  top: 0; /* Adjust to position the light div vertically */
+  left: 16px; /* Adjust to position the light div horizontally */
+  width: 475px; /* Match the container's width */
+  height: 96%; /* Match the container's height */
+  background: rgba(255,215,0, 0.3); /* Light background color with opacity */
+  z-index: 1; /* Ensure the light div is on top of the image */
+    margin-top:10px;
+
+}
+  </style>
+<body>
+  <div class="main-container">
+    <div class="sub-container pink-container" style="height:450px;">
+      <!-- Content for the pink container -->{% load static %}
+<div class="container">
+  <img src="{% static 'images/terna2.jpeg' %}" alt="Your Image" class="image">
+  <div class="light">
+      <h1 style="margin-top:250px; margin-left:50px;">Welcome to <br> Terna Knowledge City !</h1>
+  </div>
+</div>
+
+
+
+    </div>
+    <div class="sub-container yellow-container"style="height:450px;">
+      <!-- Content for the yellow container -->
+<div class="container">
+  <img src="{% static 'images/img4.jpeg' %}" alt="Your Image" class="image1">
+  <div class="light1">
+       <h4 style="margin-top:100px; margin-left:50px;">Terna stays in contact <br> with all Alumins!</h4>
+  </div>
+</div>
+        <div>
+      <!-- Content for the first vertical div -->
+    </div>
+    <div>
+      <!-- Content for the second vertical div -->
+     <div class="container">
+  <img src="{% static 'images/img2.jpeg' %}" alt="Your Image" class="image1" style="margin-top:10px;">
+  <div class="light2">
+             <h4 style="margin-top:100px; margin-left:50px;">Terna encourages students<br> to build leadership qualities!</h4>
+  </div>
+</div>
+    </div>
+
+    </div>
+    <div class="sub-container orange-container" style="height:450px;">
+      <!-- Content for the orange container -->
+       <div>
+      <div class="container">
+  <img src="{% static 'images/img3.jpeg' %}" alt="Your Image" class="image1">
+  <div class="light3">
+       <h4 style="margin-top:100px; margin-left:100px;">Terna encourages students<br> to learn new!</h4>
+  </div>
+</div>
+    </div>
+    <div>
+      <!-- Content for the second vertical div --> <div class="container">
+  <img src="{% static 'images/img1.jpeg' %}" alt="Your Image" class="image1" style="margin-top:10px;">
+  <div class="light4">
+       <h4 style="margin-top:100px; margin-left:100px;">Terna makes you ready<br> for this changing society!</h4>
+  </div>
+</div>
+    </div>
+    </div>
+  </div>
+
+     <div class="container mt-4">
+        <table class="table" style="margin-top:170px;">
+
+            <tbody>
+                <tr>
+                    <td><img src="{% static 'images/terna22.jpg' %}" alt="Your Image" class="imagea"></td>
+                    <td> <h3>Our graduates are working successfully in various fields and professions across the world, since the last 25 years.</h3>
+                </tr>
+                <tr>
+                    <td>TERNA Engineering College, Nerul’s ALUMNI ASSOCIATION which was conceived in the year 2003 with the idea of bringing all the alumni of our college under one roof, to inspire the younger genre of students, and through these initiations students will get to know about the opportunities in the outside world, can learn from the experiences of our alumni and get to hear from our alumni their experience in industry or academia, interesting anecdotes, career decisions and learn from them. An open-ended discussion follows, wherein the students can ask questions to the alumnus. Additionally, the alumnus can also bring in novel ideas conduct programs which are beneficial to the students and can also interact with the alumni.
+                    <td><img src="{% static 'images/terna11.jpg' %}" alt="Your Image" class="imagea"></td>
+
+                </tr>
+
+                <tr>
+                    <td><img src="{% static 'images/terna2.jpeg' %}" alt="Your Image" class="imagea"></td>
+                    <td>Apart from this, Alumni Association is a platform to acknowledge the contributions and achievements of all alumni, a great opportunity for to meet old buddies, make new ones, rekindle relationship with the institute, engage with students, meet faculties, industry champions and last, but not least, have a great time together.</td>
+                    </td>
+                </tr>
+        </table>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--    <div class="container">-->
+<!--        <h1 class="mt-5 mb-4">PhD in Computer Science News</h1>-->
+
+<!--        <div class="row">-->
+<!--            <div class="col-md-6">-->
+<!--                <div class="card mb-4">-->
+<!--                    <img src="https://source.unsplash.com/1920x1080/?computer" class="card-img-top" alt="News Image">-->
+<!--                    <div class="card-body">-->
+<!--                        <h5 class="card-title">Latest Research Breakthrough</h5>-->
+<!--                        <p class="card-text">-->
+<!--                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.-->
+<!--                            Proin bibendum, urna sed bibendum aliquam.-->
+<!--                        </p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div><div class="col-md-6">-->
+<!--                <div class="card mb-4">-->
+<!--                    <img src="https://source.unsplash.com/1920x1080/?computer" class="card-img-top" alt="News Image">-->
+<!--                    <div class="card-body">-->
+<!--                        <h5 class="card-title">Latest Research Breakthrough</h5>-->
+<!--                        <p class="card-text">-->
+<!--                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.-->
+<!--                            Proin bibendum, urna sed bibendum aliquam.-->
+<!--                        </p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div><div class="col-md-6">-->
+<!--                <div class="card mb-4">-->
+<!--                    <img src="https://source.unsplash.com/1920x1080/?computer" class="card-img-top" alt="News Image">-->
+<!--                    <div class="card-body">-->
+<!--                        <h5 class="card-title">Latest Research Breakthrough</h5>-->
+<!--                        <p class="card-text">-->
+<!--                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.-->
+<!--                            Proin bibendum, urna sed bibendum aliquam.-->
+<!--                        </p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div><div class="col-md-6">-->
+<!--                <div class="card mb-4">-->
+<!--                    <img src="https://source.unsplash.com/1920x1080/?computer" class="card-img-top" alt="News Image">-->
+<!--                    <div class="card-body">-->
+<!--                        <h5 class="card-title">Latest Research Breakthrough</h5>-->
+<!--                        <p class="card-text">-->
+<!--                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.-->
+<!--                            Proin bibendum, urna sed bibendum aliquam.-->
+<!--                        </p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+
+{% endblock %}

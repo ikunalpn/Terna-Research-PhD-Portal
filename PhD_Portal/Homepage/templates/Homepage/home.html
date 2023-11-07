@@ -1,0 +1,321 @@
+{% extends "base.html" %}
+{% block content %}
+ <style>.fixed-size-container {
+      width: 800px;
+      height: 200px;
+      border: 1px solid #ccc;
+      padding: 5px;
+      margin: 5px;
+      text-align: center;
+      /* Center text horizontally */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+      /* Apply Arial font */
+      cursor: pointer;
+      /* Add a pointer cursor to indicate interactivity */
+      transition: background-color 0.3s;
+      /* Add a smooth background color transition */
+      background-color: #007BFF;
+      /* Initial background color */
+      color: #fff;
+      /* Text color */
+      border-radius: 5px;
+      /* Rounded corners */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      /* Drop shadow */
+    }
+
+    /* Hover effect */
+    .fixed-size-container:hover {
+      background-color: #0056b3;
+      /* Change background color on hover */
+    }
+
+    .table-container {
+      margin: 1px;
+      /* Adjust this value to control the space between containers */
+      padding: 5px;
+    }
+
+    .marquee {
+    white-space: nowrap;
+    overflow: hidden;
+    background-color:#c1e3ed Background color of the marquee container */
+
+  }
+
+  .marquee p {
+    display: inline-block;
+    padding-left: 100%; /* Start from the right edge */
+    animation: marquee 20s linear infinite; /* Adjust the duration (10s) as needed */
+     color: #800020;
+  }
+
+  @keyframes marquee {
+    0% { transform: translateX(100%); } /* Start off-screen to the right */
+    100% { transform: translateX(-100%); } /* Move to the left edge */
+  }
+.half-circle{
+height:700px;
+width:40%;
+ background:white;
+border-radius:100% 0px 0px 100%;
+overflow:hidden;
+position:absolute;
+
+top:-100px
+ }
+ .cont{
+ margin-top:5px;
+ justify-content:end;
+ overflow:hidden;
+ position:relative;
+display:flex;
+
+ }
+ .c1{
+  position:absolute;
+  height:350px;
+  width:650px;
+  top:188px;
+  left:850px;
+
+ }
+.hi{
+ position:absolute;
+ left:125px;
+ top:250px;
+ color: white;
+
+}
+
+.sp{
+position:absolute;
+ left:250px;
+ top:400px;
+ color: white;
+}
+
+.reach i{
+margin-top:10px;
+ margin-left: 68px;
+ font-size:105px;
+
+}
+
+.reach h3{
+ margin-left: 85px;
+  font-size:25px;
+
+}
+.reach span{
+ margin-left: 85px;
+
+}
+
+.hello h3{
+margin-left: 68px;
+}
+.hello i{
+ margin-left: 100px;
+ font-size:80px;
+}
+
+.event h3{
+font-size:30px;
+padding-top:15px;
+margin-left:150px;
+}
+.p2{
+ height:200px;
+ width:250px;
+}
+.main_container{
+justify-content:center;
+width:100wh;
+}
+
+a {
+      text-decoration: none !important;
+      color: #000000;
+      }
+ }
+
+
+ </style>
+
+<div class="main_container" >
+   <div class="container-fluid">
+  <div class="marquee">
+    <p>WELCOME TO TERNA RESEARCH PHD WEBPORTAL !!! &nbsp; WELCOME TO TERNA RESEARCH PHD WEBPORTAL !!!&nbsp; WELCOME TO TERNA RESEARCH PHD WEBPORTAL !!!&nbsp; WELCOME TO TERNA RESEARCH PHD WEBPORTAL !!!&nbsp; </p>
+  </div>
+</div>
+
+
+<div class="cont" style="background: linear-gradient(to right,#0C023E,#1D2570,#0077B6,#00B4D8,#90E0E4,#AAC9DD,#D2E1E6); /* Set the background color */
+    height: 400px; /* Set the desired height */
+    margin-left: 15px;
+    width: 1500px">
+
+  <!-- Container that covers the entire page width -->
+
+
+<div class="half-circle"></div>
+<div class="half-circle2"></div>
+
+
+  <!-- You can add content to this container -->
+</div>
+
+{% load static %}
+<img src="{% static 'images/terna2.jpeg' %}" class="c1" alt="">
+
+<div>
+
+
+   <h2 class="hi">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Welcome <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;to<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;    Terna Research (Ph.D.) Portal</h2>
+   <span class="sp">This is the Official Research Ph.D. portal for Terna Nerul.<br>
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;Create your profile , Fill Your Information.</span>
+
+
+</div>
+
+<div class="reach" id="reach">
+
+    <div class="row" style=" margin:15px">
+      <div  style="background-color: yellow; height: 520px; width:300px; ">
+         <div style="background-color: #ffb703; height: 50%;">
+
+             <i class="fa-solid fa-people-group"></i>
+             <h3>Research Scholar</h3>
+             <span>Completed: {{ completed_students }}</span><br>
+              <span>Ongoing: {{ ongoing_students }}</span>
+         </div>
+          <div  class="hello"style="background-color: #219ebc; height: 50%;">
+
+
+              <i class="fa-solid fa-download" ></i>
+              <h3 class="do"> DOWNLOADS</h3>
+              <a href="https://drive.google.com/file/d/1DYW8NAbTfxUdAy3cfwlGVkNrepZZI9BG/view?usp=drive_link" target="_blank"><span>Student List</span><br></a>
+              <a href="https://drive.google.com/file/d/1G8Ac_5enSPCij9qlr34u5-B9oWi8mzPv/view?usp=drive_link" target="_blank"><span>Annual Report</span><br></a>
+          </div>
+
+      </div>
+      <div style="background-color:#8ecae6 ; height: 520px; width:580px;  ">
+          <div  class="event" style="background-color: #8ecae6; height:260px;">
+
+              <h3>Latest Events & News</h3>
+
+              <span>
+
+<table border="1px solid" style="height:40%; width: 580px; text-align: center;">
+  <tr>
+          <th>Date</th>
+          <th>Research Symposium</th>
+          <th>Released On</th>
+        </tr>
+  <tr>
+    <td> 6 June</td>
+    <td >Research Symposium-6</td>
+    <td >5 Months Ago</td>
+  </tr>
+ <tr>
+    <td>2 Nov</td>
+    <td>Research Symposium-7</td>
+    <td>4 day ago</td>
+  </tr>
+</table>
+</span>
+          </div>
+          <div style="background-color: #fb8500; width:580px;  height:260px ">
+              <div class="table-container table border table-hover" style="height: 100%; width:580px; overflow: auto;">
+    <table style="width: 100%; height: 100%;">
+      <thead>
+      <tr>
+          <th colspan="5"  class="text-center">Registration Details</th>
+
+        </tr>
+        <tr>
+          <th>Sr.</th>
+          <th>Types of Registration</th>
+          <th>Completed</th>
+          <th>Ongoing</th>
+          <th>total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>IRSS(Institute Research Scholar Scheme )</td>
+          <td> 0</td>
+          <td>18</td>
+          <td>18</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Visvesvarya Scholarship</td>
+          <td>0</td>
+          <td>5</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>IRSS(Institute Research Scholar Scheme )</td>
+          <td> 0</td>
+          <td>18</td>
+          <td>18</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+          </div>
+      </div>
+      <div  style="background-color: #023045; height: 520px; width:600px; ">
+
+  <div class="table-container table border table-hover" style="height: 100%; width: 600px; overflow: auto;">
+  <table style="width: 100%; height: 100%;">
+    <thead>
+      <tr>
+        <th colspan="3" class="text-center" style="color: white">Research Scholars</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for student in students %}
+      <tr>
+        <td class="p2">
+         <img src="{{ student.photo.url }}" alt="{{ student.name }}" class="card-img">
+        </td>
+        <td style="color: white">
+          <h5 class="card-title">{{ student.name }}</h5>
+          <p class="card-text">Status: {{ student.status }}</p>
+          <p class="card-text">Scholar: {{ student.scholar }}</p>
+          <p class="card-text">Title: {{ student.title }}</p>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+</div>
+
+    </div>
+  </div>
+
+
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</div>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>  <!-- Your content goes here -->
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "admin_base.html" %}
+
+{% block content %}
+<div class="container mt-4">
+  <h2 class="text-center">Admin Dashboard</h2>
+
+
+  <!-- Display admin details -->
+  <div class="text-center mt-4">
+    <h3>Admin Details</h3>
+    <p>Name: {{ admin.name }}</p>
+    <p>Email: {{ admin.email }}</p>
+    <p>Contact: {{ admin.contact }}</p>
+    <img src="{{ admin.photo.url }}" alt="{{ admin.name }}" width="150">
+  </div>
+
+   <div class="text-center mt-3"> <!-- Center-align content -->
+    <div class="mb-3">
+      <a href="{% url 'progress_seminar_report' %}" class="btn btn-primary">Generate Progress Seminar Report</a>
+    </div>
+    <div class="mb-3">
+      <a href="{% url 'master_list' %}" class="btn btn-primary">Generate Master Student List Report</a>
+    </div>
+<!--    <div class="mb-3">-->
+<!--      <a href="{% url 'add_student' %}" class="btn btn-success">Add Student</a>-->
+<!--    </div>-->
+<!--    <div class="mb-3">-->
+<!--      <a href="{% url 'add_supervisor' %}" class="btn btn-success">Add Supervisor</a>-->
+<!--    </div>-->
+  </div>
+</div>
+{% endblock %}

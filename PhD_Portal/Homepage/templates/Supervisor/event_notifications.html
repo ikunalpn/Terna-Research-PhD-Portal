@@ -1,0 +1,14 @@
+{% extends "supervisor_base.html" %}
+
+{% block content %}
+  <h2>Event Notifications</h2>
+  <ul>
+    {% for notification in notifications %}
+      <li>
+        <h3>{{ notification.title }}</h3>
+        <p><strong>Date:</strong> {{ notification.date }}</p>
+        <p>{{ notification.description }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

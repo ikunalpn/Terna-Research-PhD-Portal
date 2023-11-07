@@ -1,0 +1,146 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+<style>
+    .container {
+            display: flex;
+             /* Use Flexbox to arrange elements horizontally */
+        }
+
+        .box {
+            flex: 1; /* Make both divs take equal horizontal space */
+            height: 400px;
+
+        }
+        .box h2,h6,p{
+        margin-left:50px;
+        }
+        .box h2{
+        padding-top;20px;
+        }
+    /* Center the team members */
+    .team-container {
+        display: flex;
+        justify-content: center;
+        height: 34vh; /* Adjust the height as needed */
+    }
+
+    .team-member {
+        text-align: center;
+        margin: 20px;
+        display: inline-block;
+
+    }
+
+    .member-image {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%; /* Create a circular image */
+        overflow: hidden; /* Hide image overflow */
+    }
+    .member-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    }
+    .member-name {
+        margin-top: 10px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #333; /* Set the color for the member names */
+    }
+    .video{
+    height:400px;
+    width:100%;
+    }
+    .section2, .section3{
+    border-radius:20px;
+    height:150px;
+    width:1138px;
+
+
+    }
+    h3{
+    margin-left:50px;
+    }
+   .section2 h3 {
+   padding-top:20px;
+   }
+
+   .section3 h3 {
+   padding-top:20px;
+   }
+    .about {
+    margin-left: -75px;
+}
+</style>
+
+
+<div class="container" style="background-color: #023045; color:white; border-radius:20px;">
+        <div class="box" style=" ">
+            <br>
+            <h2>Contact Us</h2>
+                 <br><h6>Plot No. 12, Sector-22, Opp. Nerul Railway Station, <br> Phase-II, Nerul (W), Navi Mumbai, Mumbai, 400706.</h6>
+                <p>
+
+                <br> For Admission
+                <br> Contact: 7406515444
+                <br> Email: admission@ternaengg.ac.in
+
+                <br> Ph: 022-61115444 (30 lines)
+                <br> Fax: 022-61115400
+                <br> Email: info@ternaengg.ac.in
+                </p>
+        </div>
+<div class="box" style="background-color: #023045;">
+  <iframe class="video" src="https://www.youtube.com/embed/ba3q04IKbyA?autoplay=1&mute=1&loop=0&color=white&controls=0&modestbranding=1&playsinline=1&rel=0&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+    </div>
+<div class="about">
+
+<div class="section2" style="background-color:#8ecae6; margin-left:270px; margin-top:10px;">
+    <h3>Vision</h3>
+    <p style=";">Vision To deliver value-added quality education to the aspiring students, meeting stringent requirements of the changing technology, industry, business and society as a whole.</p></td>
+</div>
+    <div class="section3" style="background-color:#fb8500;margin-left:270px; margin-top:10px;">
+        <h3>Mission</h3> <p>To provide an environment of academic excellence and adopt appropriate teaching – learning processes to produce competent and skilled engineers to meet global challenges. </p></td>
+    </div>
+</div>
+
+<body>
+<div style="text-align:center; margin-top:20px; margin-bottom:20px;"> <h1>Developed by</h1> </div>
+    <div class="team-container">
+
+        <div class="team-member">
+            <a href="https://www.linkedin.com/in/kunalpandhare/" class="member-name" target="_blank">
+            <div class="member-image">
+                <img src="{% static 'images/kunal1.jpeg' %}" alt="Member 1">
+            </div>
+            Er. Kunal Pandhare</a>
+        </div>
+        <div class="team-member">
+            <a href="https://www.linkedin.com/in/kinjan-parkar-kap13/" class="member-name" target="_blank">
+            <div class="member-image">
+                <img src="{% static 'images/kinjan1.jpeg' %}" alt="Member 2">
+            </div>
+            Er. Kinjan Parkar</a>
+        </div>
+        <div class="team-member">
+            <a href="https://www.linkedin.com/in/rohitpandhare/" class="member-name" target="_blank">
+            <div class="member-image">
+                <img src="{% static 'images/rohit1.jpeg' %}" alt="Member 3">
+            </div>
+            Er. Rohit Pandhare</a>
+        </div>
+        <div class = "team-member">
+            <a href="https://www.linkedin.com/in/mukul-kendre-1ab6a5257/" class="member-name" target="_blank">
+            <div class="member-image">
+                <img src="{% static 'images/mukul1.jpeg' %}" alt="Member 4">
+            </div>
+            Er. Mukul Kendre</a>
+        </div>
+    </div>
+</body>
+{% endblock %}

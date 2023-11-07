@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhD Webportal</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/0c2bfb0732.js" crossorigin="anonymous"></script>
+    <style>
+        .scrollable-navbar {
+            overflow-x: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <!-- <nav class="navbar navbar-expand-lg bg-info navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/student_base.html">Terna College</a>
+        </div>
+    </nav> -->
+
+    <nav class="navbar navbar-expand-lg bg-info navbar-dark scrollable-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/Supervisior.html">Terna College</a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/Supervisior/Edit_Profile.html"><i
+                            class="fa-solid fa-pen-to-square"></i> Edit Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/Supervisior/Student_Details.html"><i
+                            class="fa-solid fa-graduation-cap"></i> Student
+                        Details</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/Supervisior/Remunaretion_Data.html"><i
+                            class="fa-solid fa-money-bill"></i> Remuneration Data</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/Supervisior/IPR_Scholar.html"><i
+                            class="fa-solid fa-copyright"></i> IPR Scholar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/Supervisior/Publication_Associate.html"><i
+                            class="fa-solid fa-newspaper"></i> Publication
+                        Associate</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/Supervisior/Event_notification.html"><i
+                            class="fa-solid fa-bell"></i> Event Notification</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/Supervisior/Research_Grant.html"><i
+                            class="fa-solid fa-dollar-sign"></i> Research Grant</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/Supervisior/Notice.html"><i class="fa-solid fa-envelope"></i>
+                        Notice
+                    </a>
+                </li>
+                <li class="nav-item me-3 me-lg-0">
+                    <a class="nav-link text-white" href="/Supervisior/Forum.html"><i
+                            class="fa-solid fa-comment"></i></i>
+                        Discussion
+                        Forum</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/Supervisior/Auth_Events.html"><i
+                            class="fa-solid fa-list-check"></i> Authorize Event</a>
+                </li>
+                <li class="nav-item me-3 me-lg-0">
+                    <a class="nav-link text-white" href="/Supervisior/Reports.html"><i class="fa-solid fa-file"></i>
+                        Reports</a>
+                </li>
+            </ul>
+            <div class="dropdown">
+                <button class="btn text-white dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <i class="fas fa-user mx-1"></i> Supervisior
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/index.html">My Profile</a></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar -->
+
+
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Edit Student Profile</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="dropdown mt-3">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                    Update Info
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/Student/regform.html">Registration Form</a></li>
+                    <li><a class="dropdown-item" href="/Student/Student_document.html">Upload Document</a></li>
+
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="PSC_events" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Progress Seminar</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <a class="dropdown-item" href="/Student/Publication/View_event.html">View Events</a>
+            <a class="dropdown-item" href="/Student/Publication/Upload_PSR.html">Upload Progess Seminar Report</a>
+            <a class="dropdown-item" href="/Student/Publication/Upload_EvalReport.html">Upload Evalution Report</a>
+            <a class="dropdown-item" href="/Student/Publication/Upload_thesis.html">Thesis Upload</a>
+            <a class="dropdown-item" href="/Student/Publication/View_event.html">View Event Remark</a>
+        </div>
+    </div>
+    </div>
+
+    <div class="container">
+        <h1>Search</h1>
+        <!-- Add an input field for filtering by name -->
+        <input type="text" id="studentFilter" class="form-control" placeholder="Search by Name">
+        <ol class="list-group list-group-numbered" id="studentList">
+            <!-- List items as you had them -->
+        </ol>
+    </div>
+
+    <!-- Your Bootstrap and other scripts here -->
+
+    <script>
+        $(document).ready(function () {
+            // Your sample student data
+            const students = [
+                { name: "John Doe", branch: "Computer Science", id: "12345" },
+                { name: "Jane Smith", branch: "Electrical Engineering", id: "54321" },
+                // Add more students here
+            ];
+
+            // Function to update the student list based on the filter
+            function updateStudentList(filter) {
+                const filteredStudents = students.filter(student => student.name.toLowerCase().includes(filter.toLowerCase()));
+
+                const studentList = $('#studentList');
+                studentList.empty();
+
+                if (filteredStudents.length > 0) {
+                    filteredStudents.forEach(student => {
+                        const listItem = `
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">${student.name}</div>
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Branch</th>
+                                                <th>ID</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>${student.name}</td>
+                                                <td>${student.branch}</td>
+                                                <td>${student.id}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </li>
+                        `;
+
+                        studentList.append(listItem);
+                    });
+                } else {
+                    studentList.append('<li class="list-group-item">No matching students found.</li>');
+                }
+            }
+
+            // Initial student list
+            updateStudentList('');
+
+            // Filter students when the input field changes
+            $('#studentFilter').on('input', function () {
+                updateStudentList($(this).val());
+            });
+        });
+    </script>
+    <!--filter ends-->
+
+
+    <ol class="list-group list-group-numbered">
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">PASSED STUDENTS</div>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Branch</th>
+                            <th>ID</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John Doe</td>
+                            <td>Computer Science</td>
+                            <td>12345</td>
+                        </tr>
+                        <tr>
+                            <td>Jane Smith</td>
+                            <td>Electrical Engineering</td>
+                            <td>54321</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">CURRENT STUDENTS</div>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Branch</th>
+                            <th>ID</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John Doe</td>
+                            <td>Computer Science</td>
+                            <td>12345</td>
+                        </tr>
+                        <tr>
+                            <td>Jane Smith</td>
+                            <td>Electrical Engineering</td>
+                            <td>54321</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">PUBLICATION -</div>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Branch</th>
+                            <th>ID</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John Doe</td>
+                            <td>Computer Science</td>
+                            <td>12345</td>
+                        </tr>
+                        <tr>
+                            <td>Jane Smith</td>
+                            <td>Electrical Engineering</td>
+                            <td>54321</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </li>
+
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">IPR</div>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Branch</th>
+                            <th>ID</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John Doe</td>
+                            <td>Computer Science</td>
+                            <td>12345</td>
+                        </tr>
+                        <tr>
+                            <td>Jane Smith</td>
+                            <td>Electrical Engineering</td>
+                            <td>54321</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </li>
+    </ol>
+
+</body>
+
+</html>

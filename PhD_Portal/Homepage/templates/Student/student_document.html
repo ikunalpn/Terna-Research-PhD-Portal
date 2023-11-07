@@ -1,0 +1,86 @@
+{% extends "student_base.html" %}
+{% block content %}
+
+
+    <div class="container">
+        <h2 class="mt-5">Ph.D. Document Submission</h2>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <!-- Offer Letter -->
+            <div class="form-group">
+                <label for="offerLetter">Offer Letter:</label>
+                <input type="file" class="form-control-file" name="offerLetter" id="offerLetter">
+            </div>
+            <br>
+            <!-- Letter of Selection -->
+            <div class="form-group">
+                <label for="selectionLetter">Letter of Selection:</label>
+                <input type="file" class="form-control-file" name="selectionLetter" id="selectionLetter">
+            </div>
+            <br>
+            <!-- Guide Approval Letter -->
+            <div class="form-group">
+                <label for="guideApprovalLetter">Guide Approval Letter:</label>
+                <input type="file" class="form-control-file" name="guideApprovalLetter" id="guideApprovalLetter">
+            </div>
+            <br>
+            <!-- Ph.D. Course Work Completion Certificate -->
+            <div class="form-group">
+                <label for="courseWorkCertificate">Ph.D. Course Work Completion Certificate:</label>
+                <input type="file" class="form-control-file" name="courseWorkCertificate" id="courseWorkCertificate">
+            </div>
+            <br>
+            <!-- Permission to Submit Topic Approval Form -->
+            <div class="form-group">
+                <label for="topicApprovalPermission">Permission to Submit Topic Approval Form:</label>
+                <input type="file" class="form-control-file" name="topicApprovalPermission"
+                    id="topicApprovalPermission">
+            </div>
+            <br>
+            <!-- RAC Report on Topic Approval Seminar -->
+            <div class="form-group">
+                <label for="racReport">RAC Report on Topic Approval Seminar:</label>
+                <input type="file" class="form-control-file" name="racReport" id="racReport">
+            </div>
+            <br>
+            <!-- Department Approval Letter -->
+            <div class="form-group">
+                <label for="deptApprovalLetter">Department Approval Letter:</label>
+                <input type="file" class="form-control-file" name="deptApprovalLetter" id="deptApprovalLetter">
+            </div>
+            <br>
+            <!-- University Form for Topic Approval Submission -->
+            <div class="form-group">
+                <label for="uniTopicApprovalForm">University Form for Topic Approval Submission:</label>
+                <input type="file" class="form-control-file" name="uniTopicApprovalForm" id="uniTopicApprovalForm">
+            </div>
+            <br>
+            <!-- Topic Approval Letter -->
+            <div class="form-group">
+                <label for="topicApproval">Topic Approval Letter:</label>
+                <input type="file" class="form-control-file" name="topicApproval" id="topicApproval">
+            </div>
+            <br>
+            <!-- Topic Registration Form with Chalan -->
+            <div class="form-group">
+                <label for="topicRegForm">Topic Registration Form with Chalan:</label>
+                <input type="file" class="form-control-file" name="topicRegForm" id="topicRegForm">
+            </div>
+            <br>
+            <!-- All Marksheets and Certificates -->
+            <div class="form-group">
+                <label for="marksheets">All Marksheets and Certificates:</label>
+                <input type="file" class="form-control-file" name="marksheets" id="marksheets" multiple>
+            </div>
+            <br>
+
+            <!-- Student Registration Letter from University -->
+            <div class="form-group">
+                <label for="registrationLetter">Student Registration Letter from University:</label>
+                <input type="file" class="form-control-file" name="registrationLetter" id="registrationLetter">
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary mt-3">Submit Documents</button>
+        </form>
+    </div>
+{% endblock %}

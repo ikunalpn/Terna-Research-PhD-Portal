@@ -1,0 +1,149 @@
+{% load static %}
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terna Research PhD Portal</title>
+    <link rel="icon" href =
+"{% static 'images/icon.png' %}"  type="image/x-icon">
+    <script src="https://kit.fontawesome.com/47e6de0398.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>.fixed-size-container {
+      width: 800px;
+      height: 200px;
+      border: 1px solid #ccc;
+      padding: 5px;
+      margin: 5px;
+      text-align: center;
+      /* Center text horizontally */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+      /* Apply Arial font */
+      cursor: pointer;
+      /* Add a pointer cursor to indicate interactivity */
+      transition: background-color 0.3s;
+      /* Add a smooth background color transition */
+      background-color: #007BFF;
+      /* Initial background color */
+      color: #fff;
+      /* Text color */
+      border-radius: 5px;
+      /* Rounded corners */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      /* Drop shadow */
+    }
+
+    /* Hover effect */
+    .fixed-size-container:hover {
+      background-color: #0056b3;
+      /* Change background color on hover */
+    }
+
+    .table-container {
+      margin: 1px;
+      /* Adjust this value to control the space between containers */
+      padding: 5px;
+    }
+
+    .marquee {
+      white-space: nowrap;
+      overflow: hidden;
+      position: relative;
+      background-color: skyblue;
+    }
+
+    .marquee p {
+      display: inline-block;
+      animation: marquee 15s linear infinite;
+      color: black;
+      font-weight: bold;
+    }
+
+    @keyframes marquee {
+      0% {
+        transform: translateX(100%);
+      }
+
+      100% {
+        transform: translateX(-100%);
+      }
+
+a {
+      text-decoration: none !important;
+      color: #000000;
+      }
+ }
+
+    }</style>
+</head>
+<body>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color : #F7F7F7;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="{% static 'images/logo.jpg' %}" style="height:90px; width:500px" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'home' %}"; style="font-weight:400">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'news'%}">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'about'%}">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'scholars'%}">Scholars</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'event'%}">Events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'home' %}#reach">Summary</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'gallery'%}">Gallery</a>
+              </li>
+<!--              <li class="nav-item">-->
+<!--                <a class="nav-link" href="#">Symposium-6</a>-->
+<!--              </li>-->
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'login_view'%}">Login</a>
+              </li>
+              <!-- <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul> -->
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li> -->
+            </ul>
+<!--            <form class="d-flex" role="search">-->
+<!--              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">-->
+<!--              <button class="btn btn-outline-success" type="submit">Search</button>-->
+<!--            </form>-->
+          </div>
+        </div>
+      </nav>
+
+{% block content %}
+        {% endblock %}
+
+</body>
+</html>

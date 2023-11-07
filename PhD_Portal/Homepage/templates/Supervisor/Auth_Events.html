@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhD Webportal</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/0c2bfb0732.js" crossorigin="anonymous"></script>
+    <style>
+        .scrollable-navbar {
+            overflow-x: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <!-- <nav class="navbar navbar-expand-lg bg-info navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/student_base.html">Terna College</a>
+        </div>
+    </nav> -->
+
+    <nav class="navbar navbar-expand-lg bg-info navbar-dark scrollable-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/Supervisior.html">Terna College</a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/Supervisior/Edit_Profile.html"><i
+                            class="fa-solid fa-pen-to-square"></i> Edit Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/Supervisior/Student_Details.html"><i
+                            class="fa-solid fa-graduation-cap"></i> Student
+                        Details</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/Supervisior/Remunaretion_Data.html"><i
+                            class="fa-solid fa-money-bill"></i> Remuneration Data</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/Supervisior/IPR_Scholar.html"><i
+                            class="fa-solid fa-copyright"></i> IPR Scholar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/Supervisior/Publication_Associate.html"><i
+                            class="fa-solid fa-newspaper"></i> Publication
+                        Associate</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/Supervisior/Event_notification.html"><i
+                            class="fa-solid fa-bell"></i> Event Notification</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/Supervisior/Research_Grant.html"><i
+                            class="fa-solid fa-dollar-sign"></i> Research Grant</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/Supervisior/Notice.html"><i class="fa-solid fa-envelope"></i>
+                        Notice
+                    </a>
+                </li>
+                <li class="nav-item me-3 me-lg-0">
+                    <a class="nav-link text-white" href="/Supervisior/Forum.html"><i
+                            class="fa-solid fa-comment"></i></i>
+                        Discussion
+                        Forum</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/Supervisior/Auth_Events.html"><i
+                            class="fa-solid fa-list-check"></i> Authorize Event</a>
+                </li>
+                <li class="nav-item me-3 me-lg-0">
+                    <a class="nav-link text-white" href="/Supervisior/Reports.html"><i class="fa-solid fa-file"></i>
+                        Reports</a>
+                </li>
+            </ul>
+            <div class="dropdown">
+                <button class="btn text-white dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <i class="fas fa-user mx-1"></i> Supervisior
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/index.html">My Profile</a></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar -->
+
+
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Edit Student Profile</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="dropdown mt-3">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                    Update Info
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/Student/regform.html">Registration Form</a></li>
+                    <li><a class="dropdown-item" href="/Student/Student_document.html">Upload Document</a></li>
+
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="PSC_events" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Progress Seminar</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <a class="dropdown-item" href="/Student/Publication/View_event.html">View Events</a>
+            <a class="dropdown-item" href="/Student/Publication/Upload_PSR.html">Upload Progess Seminar Report</a>
+            <a class="dropdown-item" href="/Student/Publication/Upload_EvalReport.html">Upload Evalution Report</a>
+            <a class="dropdown-item" href="/Student/Publication/Upload_thesis.html">Thesis Upload</a>
+            <a class="dropdown-item" href="/Student/Publication/View_event.html">View Event Remark</a>
+        </div>
+    </div>
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-center">Student Events Authorization</h1>
+
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Event Name</th>
+                            <th>Student Name</th>
+                            <th>Event Date</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Science Fair</td>
+                            <td>John Doe</td>
+                            <td>2023-08-15</td>
+                            <td>Pending Authorization</td>
+                            <td>
+                                <button class="btn btn-success">Authorize</button>
+                                <button class="btn btn-danger">Revoke</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Art Exhibition</td>
+                            <td>Jane Smith</td>
+                            <td>2023-09-20</td>
+                            <td>Authorized</td>
+                            <td>
+                                <button class="btn btn-danger">Revoke</button>
+                            </td>
+                        </tr>
+                        <!-- Add more rows for other events -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

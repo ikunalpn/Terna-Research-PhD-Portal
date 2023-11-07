@@ -1,0 +1,17 @@
+{% extends "supervisor_base.html" %}
+{% block content %}
+    <div class="container">
+        <h2>Welcome {{ supervisor.name }}</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="{{ supervisor.photo.url }}" alt="Supervisor Photo" class="img-fluid">
+            </div>
+            <div class="col-md-8">
+                <p><strong>Name:</strong> {{ supervisor.name }}</p>
+                <p><strong>Email:</strong> {{ supervisor.email }}</p>
+                <p><strong>Contact Number:</strong> {{ supervisor.contact_no }}</p>
+                <p><strong>Department:</strong> {{ supervisor.department }}</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

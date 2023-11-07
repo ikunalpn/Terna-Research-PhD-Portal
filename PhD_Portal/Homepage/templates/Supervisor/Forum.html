@@ -1,0 +1,48 @@
+{% extends "supervisor_base.html" %}
+{% block content %}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <div class="container mt-4">
+        <h2>Discussion Forum</h2>
+        <div class="row">
+            <div class="col-md-8">
+                <!-- Chat Box -->
+                <div class="chat-box" id="chatBox">
+                    <!-- Chat messages will be dynamically added here -->
+                    <div class="message">
+                        <strong>John:</strong> Hello!
+                    </div>
+                    <div class="message">
+                        <strong>Dave:</strong> Hi there!
+                    </div>
+                </div>
+                <!-- Chat Input -->
+                <div class="input-group mt-3">
+                    <input type="text" class="form-control" id="chatInput" placeholder="Type your message">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" id="sendMessage">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            // Send a message when the "Send" button is clicked
+            $("#sendMessage").click(function () {
+                var message = $("#chatInput").val();
+                if (message !== "") {
+                    $("#chatBox").append('<div class="message"><strong>You:</strong> ' + message + '</div>');
+                    $("#chatInput").val("");
+                }
+            });
+
+            // Simulate receiving a message (for demonstration purposes)
+            setTimeout(function () {
+                $("#chatBox").append('<div class="message"><strong>User 3:</strong> This is a demo message.</div>');
+            }, 2000);
+        });
+    </script>
+
+
+{% endblock %}

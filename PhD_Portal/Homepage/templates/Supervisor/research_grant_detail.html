@@ -1,0 +1,26 @@
+{% extends "supervisor_base.html" %}
+{% block content %}
+    <h2>Research Grant Details</h2>
+<table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Grant Amount</th>
+                <th>Grant Provider</th>
+                <th>Grant Deadline</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for grant in grants %}
+            <tr>
+                <td>{{ grant.title }}</td>
+                <td>{{ grant.description }}</td>
+                <td>{{ grant.grant_amount }}</td>
+                <td>{{ grant.grant_provider }}</td>
+                <td>{{ grant.grant_deadline }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

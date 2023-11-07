@@ -1,0 +1,45 @@
+{% extends "student_base.html" %}
+{% block content %}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <div class="container">
+        <h1>Welcome {{ student.student.name }}</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{{ student.student.photo.url }}" alt="{{ student.student.name }}" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <h2>{{ student.student.name }}</h2>
+                <p>Status: {{ student.student.status }}</p>
+                <p>Scholar: {{ student.student.scholar }}</p>
+                <p>Title: {{ student.student.title }}</p>
+            </div>
+        </div>
+        <hr>
+        <br>
+
+        <h2>Additional Details</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <p>Branch: {{ student.branch }}</p>
+                <p>Year: {{ student.year }}</p>
+                <p>Research Title: {{ student.research_title }}</p>
+                <p>Area of Research: {{ student.area_of_research }}</p>
+                <p>Subject: {{ student.subject }}</p>
+                <p>Guide: {{ student.guide }}</p>
+                <p>Co-Guide: {{ student.co_guide }}</p>
+                <p>Register as: {{ student.register_as }}</p>
+                <p>Register on: {{ student.register_on }}</p>
+            </div>
+            <div class="col-md-6">
+                <h3>Personal Details</h3>
+                <p>Gender: {{ student.gender }}</p>
+                <p>Date of Birth: {{ student.dob }}</p>
+                <p>Lives In: {{ student.lives_in }}</p>
+                <p>Address: {{ student.address }}</p>
+                <p>Contact Number: {{ student.contact_no }}</p>
+                <p>Email: {{ student.email }}</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
